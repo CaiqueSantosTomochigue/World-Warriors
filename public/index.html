@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -10,72 +10,53 @@
 
     <script src="./js/sessao.js"></script>
 
-    <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="icon" href="./assets/icon/favicon2.ico">
+    <link rel="stylesheet" href="/ArachnoTech/public/css/estilo.css">
+    <link rel="icon" href="/ArachnoTech/public/assets/icon/img_logo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
 <body>
-    <div class="header">
-      <div class="container">
-        <h1 class="titulo">AquaTech</h1>
-        <ul class="navbar">
-          <li class="agora">
-            <a href="#">Inicial</a>
-          </li>
-          <li>
-            <a href="simulador.html">Simulador</a>
-          </li>
-          <li>|</li>
-          <li>
-            <a href="login.html">Login</a>
-          </li>
-          <li>
-            <a href="cadastro.html">Cadastro</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  
-    <div class="banner">
-      <div class="container">
-        <p>Preservando <span>hoje</span> para existirem <span>amanhã</span>.</p>
-      </div>
-    </div>
-  
-    <div class="social">
-      <div class="container">
-        <div class="boxes">
-          <div class="box">
-            <img src="assets/imgs/planet-earth_color.png">
-            <h4>Missão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/lightbulb_color.png">
-            <h4>Visão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/growth_color.png">
-            <h4>Valores</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
+    <header>
+        <nav>
+            <a href="#inicio">
+                <img src="/ArachnoTech/public/assets/icon/img_logo.png" alt="logo_header" id="img_logo_menu" />
+            </a>
+            <div class="itens_menu">
+                <a href="#inicio">xxxx</a>
+                <a href="#desafio_atual">xxxx</a>
+                <a href="#sobre_projeto">xxxx</a>
+                <a href="#simulador">xxxx</a>
+                <a href="#sobre_nos">xxxx</a>
+                <a href="login.html">
+                    <button id="btn_login_menu">
+                        <img src="/ArachnoTech/public/assets/icon/img_logo.png" alt="" />
+                        Entrar
+                    </button>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="secao_hero" id="inicio">
+            <img id="img_fundo_hero" src="/ArachnoTech/public/assets/home_page.png" alt="" />
+            <div class="conteudo_hero">
+                <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h1>
+                <h2>
+                    Conheça mais sobre os golpes dos lutadores<br>
+                    mundialmente conhecidos como Street Fighters.
+                </h2>
+                <hr />
+                <div class="botoes_hero">
+                    <a href="#sobre_projeto"><button id="btn_hero_sobre_projeto">Conheça o Projeto</button></a>
+                    <a href="#simulador"><button id="btn_hero_simulador">Acerte o Quiz</button></a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  
-    <div class="footer">
-      <div class="container">
-        <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023-2026</h4>
-      </div>
-    </div>
-  </body>
+    </main>
+
+    <footer>
+    </footer>
+</body>
 
 </html>
