@@ -14,6 +14,8 @@
   --azul_noite: #0A1030;
   --azul_escuro_transparente: #2B3B92B3;
   --preto-sombra: #00000066;
+  --preto_80: #000000CC; /* 80% de opacidade */
+  --cinza_50: #5D5D5DCC;
   --branco_translucido: #FAFCFB40;
 }
 
@@ -30,7 +32,7 @@ html {
 }
 
 html::-webkit-scrollbar {
-  display: none;                /* Chrome, Edge, Safari */
+  display: none;
 }
 
 body {
@@ -41,29 +43,6 @@ body {
 button {
   border: none;
   cursor: pointer;
-}
-
-
-
-/* TEXTOS */
-
-.titulo_conteudo {
-  font-family: "League Spartan";
-  font-size: 36px;
-  color: var(--branco);
-}
-
-.paragrafo_conteudo {
-  font-family: "League Spartan";
-  font-size: 20px;
-  color: var(--branco);
-}
-
-.legenda {
-  font-size: 24px;
-  font-family: "League Spartan";
-  font-weight: normal;
-  color: var(--preto);
 }
 
 
@@ -98,7 +77,9 @@ nav {
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
-  color: var(--branco_gelo)
+  color: var(--branco_gelo);
+  font-family: "Press Start 2P", monospace;
+  
 }
 
 
@@ -143,7 +124,7 @@ nav {
 .conteudo_hero {
   position: relative;
   z-index: 1;
-
+  border-bottom: solid var(--preto_80);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -167,6 +148,7 @@ nav {
 }
 
 .conteudo_hero h2 {
+    font-family: "Press Start 2P", monospace;
   font-size: 24px;
   font-weight: normal;
   text-align: start;
@@ -189,11 +171,11 @@ nav {
 
 
 #btn_hero_simulador {
+  font-family: "Press Start 2P", monospace;
   padding: 15px;
   background-color: var(--azul_escuro_transparente) 0%;
   border: solid var(--branco_gelo);
   border-radius: 15px;
-
   font-size: 20px;
   font-weight: 800;
   color: var(--branco_gelo);
@@ -202,11 +184,11 @@ nav {
 
 
 #btn_hero_sobre_projeto {
+  font-family: "Press Start 2P", monospace;
   padding: 15px;
   background-color: var(--azul_escuro_transparente) 0%;
   border: solid var(--branco_gelo);
   border-radius: 15px;
-
   font-size: 20px;
   font-weight: 800;
   color: var(--branco_gelo);
@@ -280,13 +262,14 @@ nav {
   color: var(--branco);
   font-size: 42px;
   margin-bottom: 15px;
+  
 }
 
 .texto_sobre p{
   color: var(--branco_gelo);
-  font-weight: 200;
+  font-weight: 400;
   font-size: 16px;
-  font-family: "Press Start 2P", monospace;
+  font-family: "poppins", sans-serif;
 }
 
 
@@ -295,6 +278,8 @@ nav {
   flex: 1;
   display: flex;
   justify-content: center;
+  border: solid var(--amarelo_claro);
+  border-radius: 6px;
 }
 
 .sobre_img img{
@@ -303,3 +288,84 @@ nav {
   height: 100%;
 }
 
+/* SEÇÃO PERSONAGENS */
+
+.personagens{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--azul_noite);
+  gap: 10px;
+}
+
+.lutadores{
+  display: flex;
+  flex-direction: row;
+  padding: 30px 50px;
+}
+
+.lutadores img{
+  display: flex;
+  border: solid var(--amarelo_claro);
+  width: 380px;               
+  height: 420px;              
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 10px 10px var(--azul_escuro);
+}
+
+.texto_personagens{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px 50px;
+}
+
+.texto_personagens h2{
+  display: flex;
+  color: var(--amarelo_claro);
+  justify-content: center;
+  font-size: 40px;
+}
+
+.texto_personagens p{
+  display: flex;
+  color: var(--branco);
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: 500;
+  font-family: "poppins", sans-serif;
+}
+
+.icones{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+}
+
+.icon{
+  display: flex;
+  border: solid var(--amarelo_claro);
+  border-radius: 10px;
+  width: fit-content;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon:hover{
+  box-shadow: 10px 10px var(--azul_claro);
+  border: solid var(--vermelho_luta);
+}
+
+.icon img{
+  width: 100px;
+  cursor: pointer;
+}
+
+.icon img:hover{
+  transform: scale(1.05);
+}
